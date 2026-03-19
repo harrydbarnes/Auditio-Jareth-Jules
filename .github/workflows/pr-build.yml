@@ -36,3 +36,9 @@ jobs:
 
       - name: Build Electron App
         run: npx electron-builder --win
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-executable
+          path: dist/
