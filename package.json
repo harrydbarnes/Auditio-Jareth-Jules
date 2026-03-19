@@ -42,5 +42,24 @@
     "typescript-eslint": "^8.56.1",
     "vite": "^6.4.1",
     "wait-on": "^9.0.4"
+  },
+  "build": {
+    "appId": "com.jareth.meetingrecorder",
+    "productName": "Jareth",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   }
 }
